@@ -15,7 +15,7 @@ class formularioFormsTest(TestCase):
         with open('noticia/static/img/logo.png',) as file:
             document = SimpleUploadedFile(file.name, file.read(), content_type='image/png')
         
-        form = noticiaForm(data, {'image': document})
+        form = noticiaForm(data, {'image': document)
         print(form.errors)
         self.assertTrue(form.is_valid())
 
@@ -25,3 +25,5 @@ class formularioFormsTest(TestCase):
         data = {'name': m.name, 'email': m.email, 'telefono': m.telefono, 'message' : m.message, }
         form = noticiaForm(data=data)
         self.assertFalse(form.is_valid())
+
+        #los test estan instaurados.
