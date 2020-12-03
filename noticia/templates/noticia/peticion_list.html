@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Listar peticion</h1>
+
+    {% if peticion_list %}
+    <ul>
+
+      {% for contacta in contactanos_list %}
+      <li>
+        <a href="{{ peticion.get_absolute_url }}">{{ name }}</a> ({{asunto}})
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>no se encuentran sugerencias.</p>
+    {% endif %}       
+{% endblock %}

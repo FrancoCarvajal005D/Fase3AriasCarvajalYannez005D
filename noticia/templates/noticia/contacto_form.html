@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<p></p>
+
+<h1>Contactanos</h1>
+
+<form action ="" method="post">
+    {%crsf_token%}
+    <table>
+        {{form.as_table}}
+
+    </table>
+    <input type="submit" value ="Enviar">
+</form>
+
+{%endblock%}

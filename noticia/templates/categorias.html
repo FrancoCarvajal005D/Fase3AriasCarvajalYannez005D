@@ -1,0 +1,117 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="{% static 'css/carrusel.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="logonombre">
+        {% load static %}
+        <img class="logoimage" src="{% static 'imagen/Logo.jpg' %}" alt="">
+        <h1>Noticias en su hogar</h1>
+
+        <div class="barra">
+            {% block clearfix %}
+            <div class="contenedor clearfix">
+               
+                <nav class="navegacion clearfix">
+                    {% load static %}
+                    <a href="{% url 'index' %}">index</a>
+                    {% load static %}
+                    <a href="{% url 'categorias' %}">categorias</a>
+                    {% load static %}
+                    <a href="{% url 'quienes_somos' %}">quienes_somos</a>
+                    {% load static %}
+                    <a href="{% url 'contacto' %}">contacto</a>
+                    {% load static %}
+                    <a href="{% url 'peticion' %}">peticion</a>
+                </nav>
+            </div>
+            {% endblock %}
+        </div>
+<p></p>
+
+<Center><h1>Deporte</h1></Center>
+
+   <section class="contenedor seccion">
+    <center><h2 class="fw-300 centrar-texto">noticias relacionadas</h2></center>
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="{% static 'imagen/tabilo.jpg' %}" alt="Icono Internacionales">
+                <h4>El drama que vive Tabilo en Roland Garros</h4>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum ipsam, hic obcaecati ipsum nesciunt earum at eaque rerum accusamus laboriosam, aut quis, eius similique voluptate qui molestias doloribus! Praesentium.</h5h>
+            </div>
+    
+            <div class="icono">
+                <img src="{% static 'imagen/ansi.jpg' %}" alt="Icono Internacional">
+                <h4>Ansu Fati la gran contratacion del barcelona</h4>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum ipsam, hic obcaecati ipsum nesciunt earum at eaque rerum accusamus laboriosam, aut quis, eius similique voluptate qui molestias doloribus! Praesentium.</h5>
+            </div>
+            
+           
+        </div>
+    </section>
+                
+    <Center><h1>Politica</h1></Center>
+
+
+<section class="contenedor seccion">
+<center><h2 class="fw-300 centrar-texto">noticias relacionadas</h2></center>
+    <div class="iconos-nosotros">
+        <div class="icono">
+            <img src="{% static 'imagen/rusos.jpg' %}" alt="Icono Internacionales">
+            <h4>Atentado contra opositor Alexei Navalny el gobierno ruso lo niega rotundamente</h4>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum ipsam, hic obcaecati ipsum nesciunt earum at eaque rerum accusamus laboriosam, aut quis, eius similique voluptate qui molestias doloribus! Praesentium.</h5>
+        </div>
+
+        <div class="icono">
+            <img src="{% static 'imagen/evo.jpg' %}" alt="Icono Internacional">
+            <h4>Evo morales no podra ser candidato a senador en Bolivia</h4>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum ipsam, hic obcaecati ipsum nesciunt earum at eaque rerum accusamus laboriosam, aut quis, eius similique voluptate qui molestias doloribus! Praesentium.</h5>
+        </div>
+        
+       
+    </div>
+</section>     
+
+<Center><h1>Ciencia </h1></Center>
+
+   <section class="contenedor seccion">
+    <center><h2 class="fw-300 centrar-texto">noticias relacionadas</h2></center>
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="{% static 'imagen/piel.jpg' %}" alt="Icono Internacionales">
+                <h4>Investigadores australianos crean piel artificial</h4>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum ipsam, hic obcaecati ipsum nesciunt earum at eaque rerum accusamus laboriosam, aut quis, eius similique voluptate qui molestias doloribus! Praesentium.</h5>
+            </div>
+    
+            <div class="icono">
+                <img src="{% static 'imagen/robots.jpg' %}" alt="Icono Internacional">
+                <h4>Robots que ayuda a pacientes con Covid-19 a contactarse con sus seres queridos</h4>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum ipsam, hic obcaecati ipsum nesciunt earum at eaque rerum accusamus laboriosam, aut quis, eius similique voluptate qui molestias doloribus! Praesentium.</h5>
+            </div>
+            
+           
+        </div>
+    </section>
+            
+    
+
+   <footer >
+        <div class="footer">
+            {% load static %}
+            <img src="{% static 'imagen/Logo.jpg' %}" alt="">
+            <p class="footerp">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+{% endblock %}

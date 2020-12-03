@@ -1,0 +1,95 @@
+{% extends "base_generic.html" %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/carrusel.css' %}" rel="stylesheet">
+    <title>Noticias Mundo</title>
+    
+</head>
+<body>
+    <div class="logonombre">
+        {% load static %}
+        <img class="logoimage" src="{% static 'imagen/Logo.jpg' %}" alt="">
+        <h1>Noticias en su hogar</h1>
+        </div>
+        <div class="barra">
+            {% block clearfix %}
+            <div class="contenedor clearfix">
+               
+                <nav class="navegacion clearfix">
+                    {% load static %}
+                    <a href="{% url 'index' %}">index</a>
+                    {% load static %}
+                    <a href="{% url 'categorias' %}">categorias</a>
+                    {% load static %}
+                    <a href="{% url 'quienes_somos' %}">quienes_somos</a>
+                    {% load static %}
+                    <a href="{% url 'contacto' %}">contacto</a>
+                    {% load static %}
+                    <a href="{% url 'peticion' %}">peticion</a>
+                </nav>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+    
+    <div class="halito">
+    <h1>¿Quienes somos?</h1>
+        <p> Somos estudiantes de DuocUC de la carrera ingeniera en informatica,
+            con este sitio web buscamos informar a todas las personas sobre las noticias mas relevantes tanto nacionales como del mundo .
+        </p>
+    </div>
+    <main class="contenedor-quien">
+        <center><h1 class="fw-300 centrar-texto">Conoce mas sobre nuestro sitio web</h1></center>
+        <div class="contenido-nosotros">
+            {% load static %}
+            <img src="{% static 'imagen/mundo.jpg' %}" alt="Imagen sobre nuestro sitio web">
+            <div class="texto-nosotros">
+                <blockquote>Con gran interes de informar</blockquote>
+                <p>
+                    Nuestro sitio noticias está enfocado en informar con veracidad, responsabilidad e independencia. Tenemos un fiel compromiso con la calidad y con la innovación en cada uno de los contenidos que publicamos. Ofrecemos las noticias más relevantes, variadas e interesantes que surgen del acontecer nacional e internacional.
+                </P>
+                <P>
+                    Nuestro sitio de Noticias también incluye trabajos periodísticos y reportajes especiales que informa a todas las personas del mundo con el fin de entregar una información clara de lo acontecido a nivel mundial.
+                </p>
+            </div>
+        </div>
+   </main>
+
+   <section class="contenedor-seccion">
+    <center><h2 class="fw-300 centrar-texto">Nuestro sitio web esta a la orden de usted</h2></center>
+        <div class="iconos-nosotros">
+            <div class="icono">
+                {% load static %}
+                <img src="{% static 'imagen/nacionales.jpg' %}" alt="Icono Nacionales">
+                <h3>Noticias nacionales</h3>
+                <p>Nuestro sitio web cuenta con las noticias mas relevantes de nuestro pais informacion de calidad y que lo ayudara a usted</p>
+            </div>
+    
+            <div class="icono">
+                {% load static %}
+                <img src="{% static 'imagen/internacional.jpg' %}" alt="Icono Internacional">
+                <h3>Noticias del mundo</h3>
+                <p>Nuestra pagina web podra informar de lo mas importante que ocurre en el mundo</p>
+            </div>
+            
+           
+        </div>
+    </section>
+
+    <footer >
+        <div class="footer">
+            {% load static %}
+            <img src="{% static 'imagen/Logo.jpg' %}" alt="">
+            <p class="footerp">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,11 @@
+{%extends "base_generic.html%}
+
+{%block content%}
+<h1> borra sugerencia </h1>
+<p>seguro que desea borra la sugerencia: {{sugerencia}} ?</p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" action="" value="Delete">
+</form>
+{%endblock%}

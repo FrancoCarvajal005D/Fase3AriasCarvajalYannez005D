@@ -1,0 +1,83 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    {% load static %}
+    <link href="{% static 'css/carrusel.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="logonombre">
+        {% load static %}
+        <img class="logoimage" src="{% static 'imagen/Logo.jpg' %}" alt="">
+        <h1>Noticias en su hogar</h1>
+        </div>
+
+        <div class="barra">
+            {% block clearfix %}
+            <div class="contenedor clearfix">
+               
+                <nav class="navegacion clearfix">
+                    {% load static %}
+                    <a href="{% url 'index' %}">index</a>
+                    {% load static %}
+                    <a href="{% url 'categorias' %}">categorias</a>
+                    {% load static %}
+                    <a href="{% url 'quienes_somos' %}">quienes_somos</a>
+                    {% load static %}
+                    <a href="{% url 'contacto' %}">contacto</a>
+                    {% load static %}
+                    <a href="{% url 'peticion' %}">peticion</a>
+                </nav>
+            </div>
+            {% endblock %}
+        </div>
+
+    <center><h1>Contactanos</h1></center>
+
+    <main class="contenedor seccion contenido-centrado">
+        <form class="contacto" action="">
+            <legend><h3>Información Personal</h3></legend>
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" placeholder="Tú Nombre" required>
+    
+            <label for="email">E-mail: </label>
+            <input type="email" id="email" placeholder="Tú Correo electrónico" required>
+    
+            <label for="telefono">Teléfono: </label>
+            <input type="tel" id="telefono" placeholder="Tú Teléfono" required>
+    
+            <label for="message">Mensaje: </label>
+            <textarea id="message"></textarea>
+    
+            <button class="button button-contacto" type="submit">Enviar</button>
+
+            <button class="button button-contacto" type="submit">eliminar</button>
+
+            <button class="button button-contacto" type="submit">modificar</button>
+
+            <button class="button button-contacto" type="submit">listar</button>
+
+        
+    
+        </fieldset>
+        </form>
+    </main>
+    
+    
+    <footer >
+        <div class="footer">
+            {% load static %}
+            <img src="{% static 'imagen/Logo.jpg' %}" alt="">
+            <p class="footerp">Todos los derechos reservados</p>
+        </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+{% endblock %}

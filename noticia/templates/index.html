@@ -1,0 +1,141 @@
+{% extends "base_generic.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/carrusel.css' %}" rel="stylesheet">
+    <title>Noticias Mundo</title>
+</head>
+{% block content %}
+<body>
+    <div class="logonombre">
+        {% load static %}
+        <img class="logoimage" src="{% static 'imagen/Logo.jpg' %}" alt="">
+        <h1>Noticias en su hogar</h1>
+
+    <div class="barra">
+        {% block clearfix %}
+        <div class="contenedor clearfix">
+           
+            <nav class="navegacion clearfix">
+                {% load static %}
+                <a href="{% url 'index' %}">index</a>
+                {% load static %}
+                <a href="{% url 'categorias' %}">categorias</a>
+                {% load static %}
+                <a href="{% url 'quienes_somos' %}">quienes_somos</a>
+                {% load static %}
+                <a href="{% url 'contacto' %}">contacto</a>
+                {% load static %}
+                <a href="{% url 'peticion' %}">peticion</a>
+                
+            </nav>
+        </div>
+        {% endblock %}
+    </div>
+
+    
+    <div class="contenedor-carrusel">
+        <div class="container-carrusel">
+            <ul class="slider">
+                {% load static %}
+                <li id="slide1"><img src="{% static 'imagen/tres.jpeg' %}" alt="Primerside" width="width:100%"></li>
+                {% load static %}
+                <li id="slide2"><img src="{% static 'imagen/dos.jpg' %}" alt="Segundoside" width="width:100%"></li>
+                {% load static %}
+                <li id="slide3"><img src="{% static 'imagen/uno.jpg' %}" alt="Tercerside" width="width:100%"></li>
+            </ul>
+    
+        <ul class="menu-carrusel">
+            <li>
+                <a href="#slide1"></a>
+            </li>
+    
+            <li>
+                <a href="#slide2"></a>
+            </li>
+    
+            <li>
+                <a href="#slide3"></a>
+            </li>
+         </ul>
+        </div>
+
+        <center><h2 class="fw-300 centrar-texto">Lo mas importante del dia de hoy</h2></center>
+        <div class="Noticias1">
+            {% load static %}
+            <img src="{% static 'imagen/musk.jpg' %}" alt="">
+            <h4>Elon Musk y su nueva millonaria inversion.</h4>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quos dolor omnis aliquam praesentium consequuntur nisi error? Veniam perspiciatis nisi perferendis quae totam illum cupiditate necessitatibus. A excepturi autem eaque!</h5>
+        </div>
+    </div>
+    <section class="contenedor seccion">
+            <div class="iconos-nosotros">
+                <div class="icono">
+                    {% load static %}
+                    <img src="{% static 'imagen/dinero2.jpg' %}" alt="Icono Nacional"width="width:100%" >
+                    <h4>Segundo retiro 10% AFP</h4>
+                    <h5>Este miércoles 23 de septiembre se discutirá en el Congreso Nacional, cuatro proyectos para hacer un segundo retiro de fondos desde las AFP.</h5>
+                </div>
+
+                <div class="icono">
+                    {% load static %}
+                    <img src="{% static 'imagen/coquimbo.jpg' %}" alt="Icono nacional" width="width:100%">
+                    <h4>La Serena y Coquimbo salen de cuarentena </h4>
+                    <h5>El Gobierno confirmó que las comunas de La Serena y Coquimbo dejan la cuarentena y avanzan a Fase 2 del Plan Paso a Paso a partir del lunes 28 de septiembre.</h5>
+                </div> 
+                <div class="icono">
+                    {% load static %}
+                    <img src="{% static 'imagen/covi191.jpg' %}" alt="Icono nacional" width="width:100%">
+                    <h4>indicios de brotes causados por el 18  </h4>
+                    <h5>El intendente de la Región de Ñuble, Martín Arrau, señaló este miércoles durante el balance por la pandemia de Covid-19 que han evidenciado los primeros indicios de focos de contagios tras las celebraciones de las Fiestas Patrias.</h5>
+                </div> 
+
+            </div>
+        </section>
+
+        <div class="Noticias1">
+            {% load static %}
+            <img src="{% static 'imagen/trump.jpg' %}" alt="trump" width="width:100%">
+            <h4>Trump acusa al gigante asiatico de no tomar las medidas necesarias para que el virus no se hubiera propagado por todo el mundo.</h4>
+            <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente perspiciatis quos ut, esse pariatur, a voluptas culpa fugiat quas reprehenderit similique! Minus ipsum a maiores debitis quibusdam sit consequuntur mollitia.</h5>
+        </div>
+
+        <section class="contenedor seccion">
+                <div class="iconos-nosotros">
+                    <div class="icono">
+                        {% load static %}
+                        <img src="{% static 'imagen/vladimir.jpg' %}" alt="Icono Nacional" width="width:100%">
+                        <h4>Rusia obtuvo la vacuna</h4>
+                        <h5>el presidente Vladímir Putin, se mostró orgulloso de que su país haya sido el primero del mundo en certificar oficialmente una vacuna contra la covid-19.</h5>
+                    </div>
+
+                    <div class="icono">
+                        {% load static %}
+                        <img src="{% static 'imagen/maduro.jpg' %}" alt="Icono nacional" width="width:100%">
+                        <h4>Maduro crea comando "secreto" </h4>
+                        <h5>El presidente socialista, Nicolás Maduro, anunció este martes la creación de un "comando de operaciones secreto" que cumplirá labores de "inteligencia" y "contrainteligencia".</h5>
+                    </div> 
+
+                </div>
+            </section>
+
+            
+            
+
+    <footer >
+        <div class="footer">
+            {% load static %}
+            <img src="{% static 'imagen/Logo.jpg' %}" alt="">
+            <p class="footerp">Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
+</body>
+</html>
+
+{% endblock %}
